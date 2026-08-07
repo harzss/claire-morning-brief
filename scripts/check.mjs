@@ -43,10 +43,14 @@ for (const required of [
   "https://brief.clairesparlor.com/2026/08/07/og.png",
   "noindex,nofollow,noarchive",
   "全部往期",
+  "今日延伸选题",
 ]) {
   if (!html.includes(required)) {
     throw new Error(`Missing required production metadata: ${required}`);
   }
+}
+if (html.includes("玉婷")) {
+  throw new Error("Published issue contains reader-private wording");
 }
 
 const workerSource = await readFile(new URL("../src/index.js", import.meta.url), "utf8");

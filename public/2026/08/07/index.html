@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Claire Morning Signals · 2026-08-07</title>
-    <meta name="description" content="给玉婷的 10 分钟晨间科技情报：科技商业、GitHub 热门项目与 Product Hunt 精选。" />
+    <meta name="description" content="10 分钟晨间科技情报：科技商业、GitHub 热门项目与 Product Hunt 精选。" />
     <meta name="robots" content="noindex,nofollow,noarchive" />
     <link rel="canonical" href="https://brief.clairesparlor.com/2026/08/07/" />
     <meta property="og:type" content="article" />
@@ -423,17 +423,27 @@
         .hero { grid-template-columns: 1fr; }
         h1 { font-size: 44px; }
         .section-head {
-          grid-template-columns: 104px minmax(0, 1fr);
-          gap: 8px 18px;
-          align-items: start;
+          grid-template-columns: max-content minmax(0, 1fr);
+          grid-template-areas:
+            "number title"
+            ". note";
+          column-gap: 16px;
+          row-gap: 6px;
+          align-items: baseline;
         }
-        .section-head h2 {
+        .section-no {
+          grid-area: number;
           white-space: nowrap;
         }
+        .section-head h2 {
+          grid-area: title;
+          line-height: 1.18;
+        }
         .section-note {
-          grid-column: 2;
+          grid-area: note;
           max-width: 100%;
           line-height: 1.45;
+          text-align: left;
         }
         .news-grid, .product-grid { grid-template-columns: 1fr; }
         .repo { grid-template-columns: 38px 1fr; }
@@ -574,7 +584,7 @@
         </section>
 
         <aside class="action-box">
-          <div class="action-label">可变成玉婷的选题</div>
+          <div class="action-label">今日延伸选题</div>
           <p>《当 AI 不再给网站带来点击，个人品牌要怎么进入模型的答案？》</p>
         </aside>
       </main>
