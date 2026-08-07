@@ -51,6 +51,7 @@ for (const required of [
   '"note"',
   "white-space: nowrap",
   "flex: 0 0 11px",
+  "align-items: start",
   "Claire's Morning Signals",
   "更新于 2026.08.07 · 榜单数据以发布时为准",
 ]) {
