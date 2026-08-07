@@ -45,7 +45,12 @@ for (const required of [
   "2026.08.07",
   "往期 ↗",
   "今日思考",
-  "transform: translateY(-1px)",
+  'grid-template-areas:',
+  '"number"',
+  '"title"',
+  '"note"',
+  "white-space: nowrap",
+  "flex: 0 0 11px",
   "Claire's Morning Signals",
   "更新于 2026.08.07 · 榜单数据以发布时为准",
 ]) {
@@ -53,7 +58,7 @@ for (const required of [
     throw new Error(`Missing required production metadata: ${required}`);
   }
 }
-for (const forbidden of ["玉婷", "今日延伸选题", "source-strip", "Fri · 07 Aug 2026", "数据截取：2026-08-07 09:57 CST", "CLAIRE'S PARLOR · MORNING SIGNALS · SAMPLE 01"]) {
+for (const forbidden of ["玉婷", "今日延伸选题", "source-strip", "Fri · 07 Aug 2026", "数据截取：2026-08-07 09:57 CST", "CLAIRE'S PARLOR · MORNING SIGNALS · SAMPLE 01", "translateY(-1px)"]) {
   if (html.includes(forbidden)) {
     throw new Error(`Published issue contains forbidden wording or markup: ${forbidden}`);
   }
