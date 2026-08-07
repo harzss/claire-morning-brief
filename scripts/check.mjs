@@ -9,6 +9,9 @@ const files = [
   "public/2026/08/07/og.png",
   "public/2026/08/07/aveiro.png",
   "public/2026/08/07/cloudflare.jpg",
+  "public/2026/08/07/soloop.png",
+  "public/2026/08/07/shootclip.png",
+  "public/2026/08/07/ucp-radar.png",
   "public/robots.txt",
   "src/index.js",
   "wrangler.jsonc",
@@ -63,6 +66,14 @@ for (const required of [
   "product-icon",
   'src="./aveiro.png"',
   'src="./cloudflare.jpg"',
+  'src="./soloop.png"',
+  'src="./shootclip.png"',
+  'src="./ucp-radar.png"',
+  "GitHub Trending 精选",
+  "HelloGitHub 中文精选",
+  "Product Hunt 今日精选",
+  "15 分钟读完 · 19 条精选",
+  "不按榜单照搬",
   "CLAIRE'S MORNING SIGNALS",
   "更新于 2026.08.07 · 榜单数据以发布时为准",
 ]) {
@@ -70,7 +81,7 @@ for (const required of [
     throw new Error(`Missing required production metadata: ${required}`);
   }
 }
-for (const forbidden of ["玉婷", "今日延伸选题", "source-strip", "product-mark", ">AV<", ">CF<", "Fri · 07 Aug 2026", "数据截取：2026-08-07 09:57 CST", "CLAIRE'S PARLOR · MORNING SIGNALS · SAMPLE 01", "translateY(-1px)"]) {
+for (const forbidden of ["玉婷", "开源雷达", "Product Hunt 今日上榜", "今日延伸选题", "source-strip", "product-mark", ">AV<", ">CF<", "Fri · 07 Aug 2026", "数据截取：2026-08-07 09:57 CST", "CLAIRE'S PARLOR · MORNING SIGNALS · SAMPLE 01", "translateY(-1px)"]) {
   if (html.includes(forbidden)) {
     throw new Error(`Published issue contains forbidden wording or markup: ${forbidden}`);
   }

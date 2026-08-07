@@ -4,13 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Claire Morning Signals · 2026-08-07</title>
-    <meta name="description" content="10 分钟晨间科技情报：科技商业、GitHub 热门项目与 Product Hunt 精选。" />
+    <meta name="description" content="15 分钟晨间科技情报：科技商业、GitHub Trending、HelloGitHub 与 Product Hunt 精选。" />
     <meta name="robots" content="noindex,nofollow,noarchive" />
     <link rel="canonical" href="https://brief.clairesparlor.com/2026/08/07/" />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Claire's Morning Signals" />
     <meta property="og:title" content="AI 不再只争谁会聊天，开始争夺工作、成本与入口。" />
-    <meta property="og:description" content="10 分钟读完：科技商业、GitHub 热门项目与 Product Hunt 精选。" />
+    <meta property="og:description" content="15 分钟读完 · 19 条编辑精选，不按榜单照搬。" />
     <meta property="og:url" content="https://brief.clairesparlor.com/2026/08/07/" />
     <meta property="og:image" content="https://brief.clairesparlor.com/2026/08/07/og.png" />
     <meta property="og:image:secure_url" content="https://brief.clairesparlor.com/2026/08/07/og.png" />
@@ -382,6 +382,8 @@
         background: var(--cream);
       }
 
+      .product:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
       .product-heading {
         display: flex;
         align-items: center;
@@ -460,6 +462,7 @@
         .hero-side { margin-top: 30px; }
         h1 { font-size: 44px; }
         .news-grid, .product-grid { grid-template-columns: 1fr; }
+        .product:last-child:nth-child(odd) { grid-column: auto; }
         .repo { grid-template-columns: 38px 1fr; }
         .repo-stat { grid-column: 2; justify-self: start; text-align: left; }
         .repo-today { justify-content: flex-start; }
@@ -493,7 +496,7 @@
             <h1>AI 不再只争谁会聊天，开始争夺<em>工作、成本与入口</em>。</h1>
           </div>
           <div class="hero-side">
-            <strong>10 分钟读完 · 10 条精选</strong>
+            <strong>15 分钟读完 · 19 条精选</strong>
             <p>不是榜单搬运。只保留与 AI 产品、创业、内容和个人品牌相关的信号。</p>
           </div>
         </div>
@@ -542,8 +545,8 @@
         <section class="section">
           <div class="section-head">
             <div class="section-no">02 / BUILD</div>
-            <h2>开源雷达</h2>
-            <div class="section-note">GitHub 日榜 + HelloGitHub 中文精选</div>
+            <h2>GitHub Trending 精选</h2>
+            <div class="section-note">从 13 条日榜中按 AI 工作流、创业与内容价值筛选 5 条</div>
           </div>
 
           <div class="repo-list">
@@ -551,45 +554,90 @@
               <div class="repo-index">01</div>
               <div>
                 <h3>cloudflare/computer</h3>
-                <p>给 Agent 一台可操作的“电脑”。今天增长最快，Agent 基础设施继续从调用 API 走向操作完整环境。</p>
+                <p>给 Agent 一台可操作的“电脑”，让自动化从调用 API 进一步走向完整环境操作；适合观察下一代 Agent 产品会把执行边界推到哪里。</p>
               </div>
-              <div class="repo-stat"><div class="repo-today"><strong>+2,802 <span class="repo-star">★</span></strong><span class="repo-period">today</span></div><small>4,837 total</small></div>
-            </a>
-
-            <a class="repo" href="https://github.com/firecrawl/pdf-inspector">
-              <div class="repo-index">02</div>
-              <div>
-                <h3>firecrawl/pdf-inspector</h3>
-                <p>Rust PDF 检查与分类库，可识别扫描件/文本 PDF 并提取文字，为文档工作流自动选择处理路径。</p>
-              </div>
-              <div class="repo-stat"><div class="repo-today"><strong>+1,190 <span class="repo-star">★</span></strong><span class="repo-period">today</span></div><small>12,480 total</small></div>
+              <div class="repo-stat"><div class="repo-today"><strong>+2,802 <span class="repo-star">★</span></strong><span class="repo-period">today</span></div><small>5,122 total</small></div>
             </a>
 
             <a class="repo" href="https://github.com/TencentCloud/TencentDB-Agent-Memory">
-              <div class="repo-index">03</div>
+              <div class="repo-index">02</div>
               <div>
                 <h3>TencentDB-Agent-Memory</h3>
-                <p>面向团队的 Agent 记忆中枢，把对话、文档和代码沉淀为记忆、Skill、LLM Wiki 与 Code Graph。</p>
+                <p>把对话、文档和代码沉淀成可共享的记忆、Skill、Wiki 与代码图谱；与个人 AI 工作台和长期知识资产直接相关。</p>
               </div>
-              <div class="repo-stat"><div class="repo-today"><strong>+1,057 <span class="repo-star">★</span></strong><span class="repo-period">today</span></div><small>16,441 total</small></div>
+              <div class="repo-stat"><div class="repo-today"><strong>+1,057 <span class="repo-star">★</span></strong><span class="repo-period">today</span></div><small>16,997 total</small></div>
             </a>
 
-            <a class="repo" href="https://github.com/bojieli/ai-agent-book">
+            <a class="repo" href="https://github.com/mattpocock/skills">
+              <div class="repo-index">03</div>
+              <div>
+                <h3>mattpocock/skills</h3>
+                <p>把成熟工程经验封装成可复用 Agent Skills；值得借鉴的不是代码排名，而是“专业能力如何产品化成技能包”。</p>
+              </div>
+              <div class="repo-stat"><div class="repo-today"><strong>+1,873 <span class="repo-star">★</span></strong><span class="repo-period">today</span></div><small>207,871 total</small></div>
+            </a>
+
+            <a class="repo" href="https://github.com/huangruiteng/loopx">
               <div class="repo-index">04</div>
               <div>
-                <h3>bojieli/ai-agent-book</h3>
-                <p>HelloGitHub 最新中文精选：10 章解释“Agent = LLM + 上下文 + 工具”，从原理一直讲到生产实践。</p>
+                <h3>huangruiteng/loopx</h3>
+                <p>为长时间运行的 Agent 团队保存目标、待办、证据与交接状态；适合研究怎样让 AI 工作流真正持续推进而不是一次性对话。</p>
               </div>
-              <div class="repo-stat"><strong>2,572</strong><small>HelloGitHub clicks</small></div>
+              <div class="repo-stat"><div class="repo-today"><strong>+847 <span class="repo-star">★</span></strong><span class="repo-period">today</span></div><small>3,158 total</small></div>
+            </a>
+
+            <a class="repo" href="https://github.com/firecrawl/pdf-inspector">
+              <div class="repo-index">05</div>
+              <div>
+                <h3>firecrawl/pdf-inspector</h3>
+                <p>快速判断 PDF 是扫描件还是文本并提取内容，可为论文、报告和资料库自动选择 OCR 或解析路径。</p>
+              </div>
+              <div class="repo-stat"><div class="repo-today"><strong>+1,190 <span class="repo-star">★</span></strong><span class="repo-period">today</span></div><small>12,782 total</small></div>
             </a>
           </div>
         </section>
 
         <section class="section">
           <div class="section-head">
-            <div class="section-no">03 / SHIP</div>
-            <h2>Product Hunt 今日上榜</h2>
-            <div class="section-note">官方 Feed；票数未公开则不猜</div>
+            <div class="section-no">03 / DISCOVER</div>
+            <h2>HelloGitHub 中文精选</h2>
+            <div class="section-note">从 20 条中文项目中按内容创作、研究与个人品牌价值筛选 5 条</div>
+          </div>
+
+          <div class="repo-list">
+            <a class="repo" href="https://github.com/bojieli/ai-agent-book">
+              <div class="repo-index">01</div>
+              <div><h3>bojieli/ai-agent-book</h3><p>用 10 章把“Agent = LLM + 上下文 + 工具”讲到生产实践，适合系统补齐 Agent 产品判断框架。</p></div>
+              <div class="repo-stat"><strong>2,719 clicks</strong><small>HelloGitHub</small></div>
+            </a>
+            <a class="repo" href="https://github.com/JabRef/jabref">
+              <div class="repo-index">02</div>
+              <div><h3>JabRef/jabref</h3><p>开源文献与引用管理工具，可连接 Google Scholar、arXiv 并自动补全信息；对 MBA 写作和深度选题研究都实用。</p></div>
+              <div class="repo-stat"><strong>574 clicks</strong><small>HelloGitHub</small></div>
+            </a>
+            <a class="repo" href="https://github.com/Nutlope/hallmark">
+              <div class="repo-index">03</div>
+              <div><h3>Nutlope/hallmark</h3><p>专门减少 AI 网页“模板味”的设计 Skill，内置主题和检查规则；可直接反哺个人品牌网站与内容视觉。</p></div>
+              <div class="repo-stat"><strong>1,188 clicks</strong><small>HelloGitHub</small></div>
+            </a>
+            <a class="repo" href="https://github.com/calesthio/OpenMontage">
+              <div class="repo-index">04</div>
+              <div><h3>calesthio/OpenMontage</h3><p>让 AI 编程助手按自然语言完成调研、脚本、素材与视频制作；很适合拆解播客切片和视频内容流水线。</p></div>
+              <div class="repo-stat"><strong>828 clicks</strong><small>HelloGitHub</small></div>
+            </a>
+            <a class="repo" href="https://github.com/AgriciDaniel/claude-seo">
+              <div class="repo-index">05</div>
+              <div><h3>AgriciDaniel/claude-seo</h3><p>把技术 SEO、Schema 和国际化 SEO 变成带评分与优先级的行动方案；可用于验证个人品牌如何同时进入搜索与 AI 答案。</p></div>
+              <div class="repo-stat"><strong>476 clicks</strong><small>HelloGitHub</small></div>
+            </a>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div class="section-no">04 / SHIP</div>
+            <h2>Product Hunt 今日精选</h2>
+            <div class="section-note">从 50 条官方 Feed 候选中筛选 5 条；不按榜单照搬</div>
           </div>
 
           <div class="product-grid">
@@ -598,14 +646,26 @@
                 <img class="product-icon" src="./aveiro.png" width="52" height="52" alt="" />
                 <h3>Aveiro</h3>
               </div>
-              <p>用 AI Agent 发布网站、Newsletter 和社交内容。它与我们正在搭的晨报→选题→发布链路高度同题，值得当竞品样本拆解。</p>
+              <p>让 AI Agent 同时发布网站、Newsletter 和社交内容；与“晨报→选题→多平台发布”的内容工作流高度同题。</p>
             </a>
             <a class="product" href="https://www.producthunt.com/products/cloudflare">
               <div class="product-heading">
                 <img class="product-icon" src="./cloudflare.jpg" width="52" height="52" alt="" />
                 <h3>Cloudflare OS</h3>
               </div>
-              <p>口号是“为公司构建 AI 操作系统”。Agent 平台正在从单点工具升级成组织级运行层，定位本身就值得观察。</p>
+              <p>为公司搭建 AI 操作系统，把内部知识、应用和 Agent 放进统一运行层；值得观察它如何从单点工具走向组织基础设施。</p>
+            </a>
+            <a class="product" href="https://www.producthunt.com/products/soloop">
+              <div class="product-heading"><img class="product-icon" src="./soloop.png" width="52" height="52" alt="" /><h3>Soloop</h3></div>
+              <p>为独立创业者设计的 approval-first Agent OS：AI 可以执行，但关键动作先由人确认，适合作为个人工作台的产品参照。</p>
+            </a>
+            <a class="product" href="https://www.producthunt.com/products/shootclip">
+              <div class="product-heading"><img class="product-icon" src="./shootclip.png" width="52" height="52" alt="" /><h3>ShootClip</h3></div>
+              <p>用 AI 加速视频编辑，最值得关注的是它能否把播客长内容到短视频切片的时间成本真正压下来。</p>
+            </a>
+            <a class="product" href="https://www.producthunt.com/products/ucp-radar">
+              <div class="product-heading"><img class="product-icon" src="./ucp-radar.png" width="52" height="52" alt="" /><h3>UCP Radar</h3></div>
+              <p>检查产品 Feed 是否能被 AI 购物 Agent 发现；它提示了一个新分发问题：未来品牌不仅要做 SEO，还要做 Agent 可见性。</p>
             </a>
           </div>
         </section>
