@@ -7,6 +7,8 @@ const files = [
   "public/2026/08/index.html",
   "public/2026/08/07/index.html",
   "public/2026/08/07/og.png",
+  "public/2026/08/07/aveiro.png",
+  "public/2026/08/07/cloudflare.jpg",
   "public/robots.txt",
   "src/index.js",
   "wrangler.jsonc",
@@ -52,14 +54,19 @@ for (const required of [
   "white-space: nowrap",
   "flex: 0 0 11px",
   "align-items: start",
-  "Claire's Morning Signals",
+  "padding-top: 4px",
+  "product-heading",
+  "product-icon",
+  'src="./aveiro.png"',
+  'src="./cloudflare.jpg"',
+  "CLAIRE'S MORNING SIGNALS",
   "更新于 2026.08.07 · 榜单数据以发布时为准",
 ]) {
   if (!html.includes(required)) {
     throw new Error(`Missing required production metadata: ${required}`);
   }
 }
-for (const forbidden of ["玉婷", "今日延伸选题", "source-strip", "Fri · 07 Aug 2026", "数据截取：2026-08-07 09:57 CST", "CLAIRE'S PARLOR · MORNING SIGNALS · SAMPLE 01", "translateY(-1px)"]) {
+for (const forbidden of ["玉婷", "今日延伸选题", "source-strip", "product-mark", ">AV<", ">CF<", "Fri · 07 Aug 2026", "数据截取：2026-08-07 09:57 CST", "CLAIRE'S PARLOR · MORNING SIGNALS · SAMPLE 01", "translateY(-1px)"]) {
   if (html.includes(forbidden)) {
     throw new Error(`Published issue contains forbidden wording or markup: ${forbidden}`);
   }

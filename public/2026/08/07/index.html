@@ -304,6 +304,7 @@
         font-size: 14px;
         font-weight: 800;
         line-height: 1.2;
+        padding-top: 4px;
       }
 
       .repo h3 {
@@ -352,24 +353,28 @@
         background: var(--cream);
       }
 
-      .product-mark {
-        display: inline-grid;
-        width: 42px;
-        height: 42px;
-        margin-bottom: 28px;
-        place-items: center;
-        border-radius: 12px;
-        background: var(--accent-hot);
-        color: white;
-        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-        font-size: 14px;
-        font-weight: 900;
+      .product-heading {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 22px;
+      }
+
+      .product-icon {
+        flex: 0 0 52px;
+        width: 52px;
+        height: 52px;
+        border: 1px solid var(--line);
+        border-radius: 13px;
+        background: white;
+        object-fit: cover;
       }
 
       .product h3 {
-        margin: 0 0 10px;
+        margin: 0;
         font-size: 26px;
         letter-spacing: -0.03em;
+        line-height: 1.1;
       }
 
       .product p {
@@ -448,7 +453,7 @@
     <div class="page">
       <header>
         <div class="topline">
-          <div class="brand"><i class="brand-dot"></i>Claire's Morning Signals</div>
+          <div class="brand"><i class="brand-dot"></i>CLAIRE'S MORNING SIGNALS</div>
           <div class="timestamp">2026.08.07 <a href="/">往期 ↗</a></div>
         </div>
 
@@ -559,13 +564,17 @@
 
           <div class="product-grid">
             <a class="product" href="https://www.producthunt.com/products/aveiro">
-              <span class="product-mark">AV</span>
-              <h3>Aveiro</h3>
+              <div class="product-heading">
+                <img class="product-icon" src="./aveiro.png" width="52" height="52" alt="" />
+                <h3>Aveiro</h3>
+              </div>
               <p>用 AI Agent 发布网站、Newsletter 和社交内容。它与我们正在搭的晨报→选题→发布链路高度同题，值得当竞品样本拆解。</p>
             </a>
             <a class="product" href="https://www.producthunt.com/products/cloudflare">
-              <span class="product-mark">CF</span>
-              <h3>Cloudflare OS</h3>
+              <div class="product-heading">
+                <img class="product-icon" src="./cloudflare.jpg" width="52" height="52" alt="" />
+                <h3>Cloudflare OS</h3>
+              </div>
               <p>口号是“为公司构建 AI 操作系统”。Agent 平台正在从单点工具升级成组织级运行层，定位本身就值得观察。</p>
             </a>
           </div>
@@ -578,7 +587,7 @@
       </main>
 
       <footer>
-        <div>Claire's Morning Signals</div>
+        <div>CLAIRE'S MORNING SIGNALS</div>
         <div class="right">更新于 2026.08.07 · 榜单数据以发布时为准</div>
       </footer>
     </div>
