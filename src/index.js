@@ -1,12 +1,6 @@
-const LATEST_ISSUE = "/2026-08-07/";
-
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-
-    if (url.pathname === "/") {
-      return Response.redirect(new URL(LATEST_ISSUE, url.origin), 302);
-    }
 
     const response = await env.ASSETS.fetch(request);
     const headers = new Headers(response.headers);

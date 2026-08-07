@@ -100,6 +100,12 @@
       }
 
       .timestamp { color: var(--ink-3); }
+      .timestamp a {
+        margin-left: 16px;
+        color: var(--accent);
+        text-decoration: none;
+      }
+      .timestamp a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
       .hero {
         display: grid;
@@ -441,7 +447,7 @@
       <header>
         <div class="topline">
           <div class="brand"><i class="brand-dot"></i>Claire's Morning Signals</div>
-          <div class="timestamp">Fri · 07 Aug 2026 · 09:57 CST</div>
+          <div class="timestamp">Fri · 07 Aug 2026 · 09:57 CST <a href="/">全部往期 ↗</a></div>
         </div>
 
         <div class="hero">

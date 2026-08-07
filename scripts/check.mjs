@@ -1,6 +1,7 @@
 import { access, readFile } from "node:fs/promises";
 
 const files = [
+  "public/index.html",
   "public/2026-08-07/index.html",
   "public/2026-08-07/og.png",
   "public/robots.txt",
@@ -10,11 +11,24 @@ const files = [
 
 await Promise.all(files.map((file) => access(new URL(`../${file}`, import.meta.url))));
 
+const archive = await readFile(new URL("../public/index.html", import.meta.url), "utf8");
+for (const required of [
+  "晨报档案馆",
+  "https://brief.clairesparlor.com/2026-08-07/",
+  "AI 不再只争谁会聊天",
+  "noindex,nofollow,noarchive",
+]) {
+  if (!archive.includes(required)) {
+    throw new Error(`Missing required archive content: ${required}`);
+  }
+}
+
 const html = await readFile(new URL("../public/2026-08-07/index.html", import.meta.url), "utf8");
 for (const required of [
   "https://brief.clairesparlor.com/2026-08-07/",
   "https://brief.clairesparlor.com/2026-08-07/og.png",
   "noindex,nofollow,noarchive",
+  "全部往期",
 ]) {
   if (!html.includes(required)) {
     throw new Error(`Missing required production metadata: ${required}`);
