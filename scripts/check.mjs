@@ -46,13 +46,14 @@ for (const required of [
   "往期 ↗",
   "今日思考",
   "transform: translateY(-1px)",
+  "Claire's Morning Signals",
   "更新于 2026.08.07 · 榜单数据以发布时为准",
 ]) {
   if (!html.includes(required)) {
     throw new Error(`Missing required production metadata: ${required}`);
   }
 }
-for (const forbidden of ["玉婷", "今日延伸选题", "source-strip", "Fri · 07 Aug 2026", "数据截取：2026-08-07 09:57 CST"]) {
+for (const forbidden of ["玉婷", "今日延伸选题", "source-strip", "Fri · 07 Aug 2026", "数据截取：2026-08-07 09:57 CST", "CLAIRE'S PARLOR · MORNING SIGNALS · SAMPLE 01"]) {
   if (html.includes(forbidden)) {
     throw new Error(`Published issue contains forbidden wording or markup: ${forbidden}`);
   }
