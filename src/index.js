@@ -2,6 +2,13 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
+    const legacyIssue = url.pathname.match(/^\/(\d{4})-(\d{2})-(\d{2})(?:\/.*)?$/u);
+    if (legacyIssue) {
+      const [, year, month, day] = legacyIssue;
+      const suffix = url.pathname.endsWith("/og.png") ? "og.png" : "";
+      return Response.redirect(new URL(`/${year}/${month}/${day}/${suffix}`, url.origin), 301);
+    }
+
     const response = await env.ASSETS.fetch(request);
     const headers = new Headers(response.headers);
 
