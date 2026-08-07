@@ -6,12 +6,11 @@ const files = [
   "public/2026/index.html",
   "public/2026/08/index.html",
   "public/2026/08/07/index.html",
+  "public/2026/08/07/brief.md",
   "public/2026/08/07/og.png",
   "public/2026/08/07/aveiro.png",
-  "public/2026/08/07/cloudflare.jpg",
-  "public/2026/08/07/soloop.png",
   "public/2026/08/07/shootclip.png",
-  "public/2026/08/07/ucp-radar.png",
+  "data/issues/2026/08/07.json",
   "public/robots.txt",
   "src/index.js",
   "wrangler.jsonc",
@@ -50,6 +49,7 @@ for (const required of [
   "2026.08.07",
   "往期 ↗",
   "今日思考",
+  "04 / THINK",
   'grid-template-areas:',
   '"number"',
   '"title"',
@@ -63,18 +63,14 @@ for (const required of [
   "17,030",
   "22,437",
   "13,564",
-  "4,547",
   "product-heading",
   "product-icon",
   'src="./aveiro.png"',
-  'src="./cloudflare.jpg"',
-  'src="./soloop.png"',
   'src="./shootclip.png"',
-  'src="./ucp-radar.png"',
   "开源项目精选",
   "GitHub Trending + HelloGitHub",
   "Product Hunt 今日精选",
-  "12 分钟读完 · 14 条精选",
+  "10 分钟读完 · 10 条精选",
   "不按榜单照搬",
   "CLAIRE'S MORNING SIGNALS",
   "更新于 2026.08.07 · 榜单数据以发布时为准",
@@ -83,10 +79,24 @@ for (const required of [
     throw new Error(`Missing required production metadata: ${required}`);
   }
 }
-for (const forbidden of ["玉婷", "GitHub Trending 精选", "HelloGitHub 中文精选", "repo-today", "repo-period", " clicks", "开源雷达", "Product Hunt 今日上榜", "今日延伸选题", "source-strip", "product-mark", ">AV<", ">CF<", "Fri · 07 Aug 2026", "数据截取：2026-08-07 09:57 CST", "CLAIRE'S PARLOR · MORNING SIGNALS · SAMPLE 01", "translateY(-1px)"]) {
+for (const forbidden of ["12 分钟读完", "14 条精选", "JabRef/jabref", "Cloudflare OS", "Soloop", "UCP Radar", "玉婷", "GitHub Trending 精选", "HelloGitHub 中文精选", "repo-today", "repo-period", " clicks", "开源雷达", "Product Hunt 今日上榜", "今日延伸选题", "source-strip", "product-mark", ">AV<", ">CF<", "Fri · 07 Aug 2026", "数据截取：2026-08-07 09:57 CST", "CLAIRE'S PARLOR · MORNING SIGNALS · SAMPLE 01", "translateY(-1px)"]) {
   if (html.includes(forbidden)) {
     throw new Error(`Published issue contains forbidden wording or markup: ${forbidden}`);
   }
+}
+
+const markdown = await readFile(new URL("../public/2026/08/07/brief.md", import.meta.url), "utf8");
+for (const required of ["# CLAIRE'S MORNING SIGNALS · 2026.08.07", "10 分钟读完 · 10 条精选", "## 04 / THINK · 今日思考"]) {
+  if (!markdown.includes(required)) throw new Error(`Missing Markdown edition content: ${required}`);
+}
+
+const structuredIssue = JSON.parse(await readFile(new URL("../data/issues/2026/08/07.json", import.meta.url), "utf8"));
+if (structuredIssue.signals.length !== 4 || structuredIssue.repositories.length !== 4 || structuredIssue.products.length !== 2) {
+  throw new Error("Structured issue history must preserve the 4/4/2 ten-item composition");
+}
+const dedupeKeys = [...structuredIssue.signals, ...structuredIssue.repositories, ...structuredIssue.products].map((item) => item.dedupe_key);
+if (dedupeKeys.some((key) => !key) || new Set(dedupeKeys).size !== 10) {
+  throw new Error("Structured issue history requires ten unique dedupe keys");
 }
 
 const workerSource = await readFile(new URL("../src/index.js", import.meta.url), "utf8");
