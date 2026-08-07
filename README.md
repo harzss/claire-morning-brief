@@ -9,7 +9,12 @@ Private-by-link daily technology briefing published at [brief.clairesparlor.com]
 - `public/og.png` is the Feishu and social link-preview image.
 - Pages use `noindex,nofollow,noarchive`; this prevents indexing but is not authentication.
 
-## Verify and deploy
+## Automatic deployment
+
+Cloudflare Workers Builds watches the `main` branch. Pushing a commit to
+`main` automatically runs `npx wrangler deploy` and publishes the site.
+
+## Local verification and manual deployment
 
 ```bash
 pnpm install --frozen-lockfile
