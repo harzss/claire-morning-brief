@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Claire Morning Signals · 2026-08-07</title>
+    <meta name="description" content="给玉婷的 10 分钟晨间科技情报：科技商业、GitHub 热门项目与 Product Hunt 精选。" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <link rel="canonical" href="https://brief.clairesparlor.com/2026-08-07/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Claire's Morning Signals" />
+    <meta property="og:title" content="AI 不再只争谁会聊天，开始争夺工作、成本与入口。" />
+    <meta property="og:description" content="10 分钟读完：科技商业、GitHub 热门项目与 Product Hunt 精选。" />
+    <meta property="og:url" content="https://brief.clairesparlor.com/2026-08-07/" />
+    <meta property="og:image" content="https://brief.clairesparlor.com/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Claire's Morning Signals · 07 Aug 2026" />
+    <meta name="twitter:description" content="AI 不再只争谁会聊天，开始争夺工作、成本与入口。" />
+    <meta name="twitter:image" content="https://brief.clairesparlor.com/og.png" />
+    <style>
+      :root {
+        --paper: #fafafa;
+        --surface: #ffffff;
+        --ink: #0a0a0a;
+        --ink-2: #3d3d3d;
+        --ink-3: #737373;
+        --line: rgba(10, 10, 10, 0.09);
+        --accent: #c24a1e;
+        --accent-hot: #ff5733;
+        --accent-soft: #ffe0dc;
+        --cream: #fff4e8;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { background: #e9e7e3; }
+
+      body {
+        width: 1080px;
+        margin: 0 auto;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 92% 7%, rgba(255, 87, 51, 0.15), transparent 18%),
+          var(--paper);
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+          "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a { color: inherit; text-decoration: none; }
+
+      .page {
+        position: relative;
+        overflow: hidden;
+        min-height: 100vh;
+        padding: 58px 58px 54px;
+      }
+
+      .page::after {
+        content: "07";
+        position: absolute;
+        z-index: 0;
+        top: 5px;
+        right: 24px;
+        color: rgba(194, 74, 30, 0.045);
+        font-size: 270px;
+        font-weight: 900;
+        letter-spacing: -0.09em;
+        line-height: 1;
+        pointer-events: none;
+      }
+
+      header, main, footer { position: relative; z-index: 1; }
+
+      .topline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 22px;
+        border-bottom: 1px solid var(--line);
+        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .brand { display: flex; align-items: center; gap: 11px; }
+      .brand-dot {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        background: var(--accent-hot);
+        box-shadow: 0 0 0 7px rgba(255, 87, 51, 0.1);
+      }
+
+      .timestamp { color: var(--ink-3); }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 280px;
+        gap: 50px;
+        align-items: end;
+        padding: 68px 0 62px;
+      }
+
+      .eyebrow {
+        margin-bottom: 22px;
+        color: var(--accent);
+        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 650px;
+        margin: 0;
+        font-size: 62px;
+        font-weight: 860;
+        letter-spacing: -0.055em;
+        line-height: 1.06;
+      }
+
+      h1 em {
+        color: var(--accent);
+        font-style: normal;
+      }
+
+      .hero-side {
+        padding: 21px 0 2px 25px;
+        border-left: 3px solid var(--accent-hot);
+      }
+
+      .hero-side strong {
+        display: block;
+        margin-bottom: 9px;
+        font-size: 17px;
+        line-height: 1.4;
+      }
+
+      .hero-side p {
+        margin: 0;
+        color: var(--ink-3);
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      .source-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 58px;
+      }
+
+      .source-strip span {
+        padding: 8px 13px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.7);
+        color: var(--ink-2);
+        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: 11px;
+        font-weight: 700;
+      }
+
+      .section { margin-top: 56px; }
+
+      .section-head {
+        display: grid;
+        grid-template-columns: 70px 1fr auto;
+        gap: 18px;
+        align-items: baseline;
+        margin-bottom: 20px;
+      }
+
+      .section-no {
+        color: var(--accent);
+        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 27px;
+        font-weight: 830;
+        letter-spacing: -0.025em;
+      }
+
+      .section-note {
+        color: var(--ink-3);
+        font-size: 12px;
+      }
+
+      .news-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .news-card {
+        position: relative;
+        min-height: 300px;
+        padding: 30px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.92);
+        transition: transform 180ms ease, box-shadow 180ms ease;
+      }
+
+      .news-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 44px rgba(10, 10, 10, 0.08);
+      }
+
+      .news-card.featured {
+        background: var(--ink);
+        color: var(--paper);
+      }
+
+      .card-meta {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 27px;
+        color: var(--ink-3);
+        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .featured .card-meta { color: #a8a8a8; }
+      .card-source { color: var(--accent); }
+      .featured .card-source { color: #ff896a; }
+
+      .news-card h3 {
+        max-width: 390px;
+        margin: 0 0 16px;
+        font-size: 28px;
+        font-weight: 820;
+        letter-spacing: -0.035em;
+        line-height: 1.18;
+      }
+
+      .news-card p {
+        margin: 0;
+        color: var(--ink-2);
+        font-size: 15px;
+        line-height: 1.68;
+      }
+
+      .featured p { color: #c8c8c8; }
+
+      .why {
+        display: block;
+        margin-top: 18px;
+        color: var(--accent) !important;
+        font-size: 13px !important;
+        font-weight: 720;
+      }
+
+      .featured .why { color: #ff896a !important; }
+
+      .repo-list {
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        background: var(--surface);
+      }
+
+      .repo {
+        display: grid;
+        grid-template-columns: 54px 1fr 158px;
+        gap: 22px;
+        align-items: center;
+        padding: 26px 28px;
+        border-top: 1px solid var(--line);
+      }
+
+      .repo:first-child { border-top: 0; }
+
+      .repo-index {
+        color: var(--accent);
+        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .repo h3 {
+        margin: 0 0 7px;
+        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: 18px;
+        letter-spacing: -0.02em;
+      }
+
+      .repo p {
+        margin: 0;
+        color: var(--ink-3);
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .repo-stat {
+        justify-self: end;
+        text-align: right;
+        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+      }
+
+      .repo-stat strong {
+        display: block;
+        color: var(--accent);
+        font-size: 18px;
+      }
+
+      .repo-stat small {
+        color: var(--ink-3);
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .product {
+        min-height: 235px;
+        padding: 30px;
+        border-radius: 22px;
+        background: var(--cream);
+      }
+
+      .product-mark {
+        display: inline-grid;
+        width: 42px;
+        height: 42px;
+        margin-bottom: 28px;
+        place-items: center;
+        border-radius: 12px;
+        background: var(--accent-hot);
+        color: white;
+        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: 14px;
+        font-weight: 900;
+      }
+
+      .product h3 {
+        margin: 0 0 10px;
+        font-size: 26px;
+        letter-spacing: -0.03em;
+      }
+
+      .product p {
+        margin: 0;
+        color: var(--ink-2);
+        font-size: 14px;
+        line-height: 1.62;
+      }
+
+      .action-box {
+        display: grid;
+        grid-template-columns: 225px 1fr;
+        gap: 34px;
+        margin-top: 58px;
+        padding: 32px 34px;
+        border-radius: 24px;
+        background: var(--accent-soft);
+      }
+
+      .action-label {
+        color: var(--accent);
+        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      .action-box p {
+        margin: 0;
+        font-size: 23px;
+        font-weight: 790;
+        letter-spacing: -0.025em;
+        line-height: 1.38;
+      }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        margin-top: 46px;
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+        color: var(--ink-3);
+        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+        font-size: 10px;
+        line-height: 1.7;
+      }
+
+      footer .right { max-width: 530px; text-align: right; }
+
+      @media (max-width: 800px) {
+        body { width: 100%; }
+        .page { padding: 32px 22px; }
+        .hero { grid-template-columns: 1fr; }
+        h1 { font-size: 44px; }
+        .section-head {
+          grid-template-columns: 104px minmax(0, 1fr);
+          gap: 8px 18px;
+          align-items: start;
+        }
+        .section-head h2 {
+          white-space: nowrap;
+        }
+        .section-note {
+          grid-column: 2;
+          max-width: 100%;
+          line-height: 1.45;
+        }
+        .news-grid, .product-grid { grid-template-columns: 1fr; }
+        .repo { grid-template-columns: 38px 1fr; }
+        .repo-stat { grid-column: 2; justify-self: start; text-align: left; }
+        .action-box { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="topline">
+          <div class="brand"><i class="brand-dot"></i>Claire's Morning Signals</div>
+          <div class="timestamp">Fri · 07 Aug 2026 · 09:57 CST</div>
+        </div>
+
+        <div class="hero">
+          <div>
+            <div class="eyebrow">Today's signal · 今日信号</div>
+            <h1>AI 不再只争谁会聊天，开始争夺<em>工作、成本与入口</em>。</h1>
+          </div>
+          <div class="hero-side">
+            <strong>10 分钟读完 · 10 条精选</strong>
+            <p>不是榜单搬运。只保留与 AI 产品、创业、内容和个人品牌相关的信号。</p>
+          </div>
+        </div>
+
+        <div class="source-strip" aria-label="Sources">
+          <span>TECHMEME</span><span>DAILY.DEV</span><span>GITHUB TRENDING</span>
+          <span>HELLOGITHUB</span><span>PRODUCT HUNT</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="section-head">
+            <div class="section-no">01 / SIGNAL</div>
+            <h2>科技与商业</h2>
+            <div class="section-note">过去 24 小时 + 一条近期深读</div>
+          </div>
+
+          <div class="news-grid">
+            <a class="news-card featured" href="https://www.techmeme.com/260806/p57#a260806p57">
+              <div class="card-meta"><span class="card-source">Techmeme · Platformer</span><span>01</span></div>
+              <h3>“Vibe coding” 不是写代码，而是在重做公司</h3>
+              <p>Replit CEO Amjad Masad 把下一阶段描述为“自驱动公司”：Agent 不只补全代码，而是开始承担设计、运营与协作流程。</p>
+              <p class="why">值得看 → SaaS 竞争可能从功能席位转向“交付工作结果”。</p>
+            </a>
+
+            <a class="news-card" href="https://www.techmeme.com/260806/p51#a260806p51">
+              <div class="card-meta"><span class="card-source">Techmeme · The Information</span><span>02</span></div>
+              <h3>AI 功能越受欢迎，成本可能越危险</h3>
+              <p>报道称 Canva 下调收入增长预期；重度使用 AI 功能抬高成本、拖慢上线，同时部分用户转向 ChatGPT。</p>
+              <p class="why">经营信号 → “加了 AI”不等于提升留存，单位经济模型要重新算。</p>
+            </a>
+
+            <a class="news-card" href="https://www.techmeme.com/260806/p44#a260806p44">
+              <div class="card-meta"><span class="card-source">Techmeme · Bloomberg</span><span>03</span></div>
+              <h3>OpenAI 想把 AI 从 App 搬到桌面</h3>
+              <p>消息称 OpenAI 计划在 2027 年推出冰球大小的智能音箱，带可运动部件，售价可能超过 300 美元。</p>
+              <p class="why">产品信号 → 下一代入口可能不是屏幕，而是有“人格”的环境设备。</p>
+            </a>
+
+            <a class="news-card" href="https://daily.dev/blog/search-traffic-tripled-90-days-seo-lessons/">
+              <div class="card-meta"><span class="card-source">daily.dev · Jul 30</span><span>04</span></div>
+              <h3>搜索正在裂成两个完全不同的渠道</h3>
+              <p>daily.dev 的搜索流量 90 天增至约 7,000 次点击/日；但其 Google 高流量页面与 AI 引用页面几乎不重合。</p>
+              <p class="why">内容信号 → SEO 点击与 AI 引用需要两套内容、两套指标。</p>
+            </a>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div class="section-no">02 / BUILD</div>
+            <h2>开源雷达</h2>
+            <div class="section-note">GitHub 日榜 + HelloGitHub 中文精选</div>
+          </div>
+
+          <div class="repo-list">
+            <a class="repo" href="https://github.com/cloudflare/computer">
+              <div class="repo-index">01</div>
+              <div>
+                <h3>cloudflare/computer</h3>
+                <p>给 Agent 一台可操作的“电脑”。今天增长最快，Agent 基础设施继续从调用 API 走向操作完整环境。</p>
+              </div>
+              <div class="repo-stat"><strong>+2,802 ★</strong><small>today · 4,837 total</small></div>
+            </a>
+
+            <a class="repo" href="https://github.com/firecrawl/pdf-inspector">
+              <div class="repo-index">02</div>
+              <div>
+                <h3>firecrawl/pdf-inspector</h3>
+                <p>Rust PDF 检查与分类库，可识别扫描件/文本 PDF 并提取文字，为文档工作流自动选择处理路径。</p>
+              </div>
+              <div class="repo-stat"><strong>+1,190 ★</strong><small>today · 12,480 total</small></div>
+            </a>
+
+            <a class="repo" href="https://github.com/TencentCloud/TencentDB-Agent-Memory">
+              <div class="repo-index">03</div>
+              <div>
+                <h3>TencentDB-Agent-Memory</h3>
+                <p>面向团队的 Agent 记忆中枢，把对话、文档和代码沉淀为记忆、Skill、LLM Wiki 与 Code Graph。</p>
+              </div>
+              <div class="repo-stat"><strong>+1,057 ★</strong><small>today · 16,441 total</small></div>
+            </a>
+
+            <a class="repo" href="https://github.com/bojieli/ai-agent-book">
+              <div class="repo-index">04</div>
+              <div>
+                <h3>bojieli/ai-agent-book</h3>
+                <p>HelloGitHub 最新中文精选：10 章解释“Agent = LLM + 上下文 + 工具”，从原理一直讲到生产实践。</p>
+              </div>
+              <div class="repo-stat"><strong>2,572</strong><small>HelloGitHub clicks</small></div>
+            </a>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div class="section-no">03 / SHIP</div>
+            <h2>Product Hunt 今日上榜</h2>
+            <div class="section-note">官方 Feed；票数未公开则不猜</div>
+          </div>
+
+          <div class="product-grid">
+            <a class="product" href="https://www.producthunt.com/products/aveiro">
+              <span class="product-mark">AV</span>
+              <h3>Aveiro</h3>
+              <p>用 AI Agent 发布网站、Newsletter 和社交内容。它与我们正在搭的晨报→选题→发布链路高度同题，值得当竞品样本拆解。</p>
+            </a>
+            <a class="product" href="https://www.producthunt.com/products/cloudflare">
+              <span class="product-mark">CF</span>
+              <h3>Cloudflare OS</h3>
+              <p>口号是“为公司构建 AI 操作系统”。Agent 平台正在从单点工具升级成组织级运行层，定位本身就值得观察。</p>
+            </a>
+          </div>
+        </section>
+
+        <aside class="action-box">
+          <div class="action-label">可变成玉婷的选题</div>
+          <p>《当 AI 不再给网站带来点击，个人品牌要怎么进入模型的答案？》</p>
+        </aside>
+      </main>
+
+      <footer>
+        <div>CLAIRE'S PARLOR · MORNING SIGNALS · SAMPLE 01</div>
+        <div class="right">数据截取：2026-08-07 09:57 CST。GitHub 为 daily trending 实时值；Product Hunt 使用官方 Atom Feed，未获得可靠票数，因此不展示虚构排名。</div>
+      </footer>
+    </div>
+  </body>
+</html>
