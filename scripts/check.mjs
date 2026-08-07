@@ -58,10 +58,12 @@ for (const required of [
   "flex: 0 0 11px",
   "align-items: start",
   "padding-top: 4px",
-  "repo-today",
   "repo-star",
-  "repo-period",
-  '<span class="repo-period">today</span>',
+  "45,744",
+  "17,030",
+  "22,437",
+  "13,564",
+  "4,547",
   "product-heading",
   "product-icon",
   'src="./aveiro.png"',
@@ -69,10 +71,10 @@ for (const required of [
   'src="./soloop.png"',
   'src="./shootclip.png"',
   'src="./ucp-radar.png"',
-  "GitHub Trending 精选",
-  "HelloGitHub 中文精选",
+  "开源项目精选",
+  "GitHub Trending + HelloGitHub",
   "Product Hunt 今日精选",
-  "15 分钟读完 · 19 条精选",
+  "12 分钟读完 · 14 条精选",
   "不按榜单照搬",
   "CLAIRE'S MORNING SIGNALS",
   "更新于 2026.08.07 · 榜单数据以发布时为准",
@@ -81,7 +83,7 @@ for (const required of [
     throw new Error(`Missing required production metadata: ${required}`);
   }
 }
-for (const forbidden of ["玉婷", "开源雷达", "Product Hunt 今日上榜", "今日延伸选题", "source-strip", "product-mark", ">AV<", ">CF<", "Fri · 07 Aug 2026", "数据截取：2026-08-07 09:57 CST", "CLAIRE'S PARLOR · MORNING SIGNALS · SAMPLE 01", "translateY(-1px)"]) {
+for (const forbidden of ["玉婷", "GitHub Trending 精选", "HelloGitHub 中文精选", "repo-today", "repo-period", " clicks", "开源雷达", "Product Hunt 今日上榜", "今日延伸选题", "source-strip", "product-mark", ">AV<", ">CF<", "Fri · 07 Aug 2026", "数据截取：2026-08-07 09:57 CST", "CLAIRE'S PARLOR · MORNING SIGNALS · SAMPLE 01", "translateY(-1px)"]) {
   if (html.includes(forbidden)) {
     throw new Error(`Published issue contains forbidden wording or markup: ${forbidden}`);
   }

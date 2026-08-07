@@ -1,6 +1,6 @@
 # Claire's Morning Signals
 
-2026-08-07 · 15 分钟读完 · 19 条精选
+2026-08-07 · 12 分钟读完 · 14 条精选
 
 > 今日信号：AI 不再只争谁会聊天，开始争夺工作、成本与入口。
 
@@ -38,25 +38,15 @@ daily.dev 的搜索流量 90 天增至约 7,000 次点击/日；但其 Google �
 
 [daily.dev 原文](https://daily.dev/blog/search-traffic-tripled-90-days-seo-lessons/)
 
-## GitHub Trending 精选
+## 开源项目精选
 
-从 13 条日榜中筛选，不按排名照搬：
+合并 GitHub Trending 与 HelloGitHub 候选，按内容与工作流相关性排序：
 
-1. [cloudflare/computer](https://github.com/cloudflare/computer) — 给 Agent 一台可操作的电脑，适合观察 Agent 执行边界。今日 `+2,802 stars`。
-2. [TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) — 把对话、文档与代码沉淀成长期记忆资产。今日 `+1,057 stars`。
-3. [mattpocock/skills](https://github.com/mattpocock/skills) — 把专业能力产品化成可复用 Agent Skills。今日 `+1,873 stars`。
-4. [huangruiteng/loopx](https://github.com/huangruiteng/loopx) — 为长时间运行的 Agent 保存目标、证据与交接状态。今日 `+847 stars`。
-5. [firecrawl/pdf-inspector](https://github.com/firecrawl/pdf-inspector) — 为论文、报告和资料库自动选择 PDF 解析路径。今日 `+1,190 stars`。
-
-## HelloGitHub 中文精选
-
-从 20 条中文项目中按内容创作、研究和个人品牌价值筛选：
-
-1. [bojieli/ai-agent-book](https://github.com/bojieli/ai-agent-book) — 系统补齐 Agent 产品判断框架。
-2. [JabRef/jabref](https://github.com/JabRef/jabref) — MBA 写作和深度选题研究的开源文献工具。
-3. [Nutlope/hallmark](https://github.com/Nutlope/hallmark) — 减少 AI 网页模板味的设计 Skill。
-4. [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) — 用 AI 助手完成视频调研、脚本和制作。
-5. [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) — 把 SEO 与 AI 可见性变成可执行检查。
+1. [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) — AI 视频调研、脚本和制作工作流。总计 `45,744 stars`。
+2. [TencentDB-Agent-Memory](https://github.com/TencentCloud/TencentDB-Agent-Memory) — 个人 AI 工作台的长期知识底座。总计 `17,030 stars`。
+3. [Nutlope/hallmark](https://github.com/Nutlope/hallmark) — 减少 AI 网页模板味的设计 Skill。总计 `22,437 stars`。
+4. [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) — 把 SEO 与 AI 可见性变成行动方案。总计 `13,564 stars`。
+5. [JabRef/jabref](https://github.com/JabRef/jabref) — MBA 写作和深度选题研究的开源文献工具。总计 `4,547 stars`。
 
 ## Product Hunt 今日精选
 
@@ -74,4 +64,4 @@ daily.dev 的搜索流量 90 天增至约 7,000 次点击/日；但其 Google �
 
 ---
 
-GitHub 为 daily trending 发布时快照；Product Hunt 使用官方 Atom Feed，未获得可靠票数，因此不展示虚构排名。daily.dev 本轮自动抓取未解析出条目，科技与商业沿用已核验的公开文章。
+仓库总 Star 为发布时的 GitHub 页面快照；Product Hunt 使用官方 Atom Feed，未获得可靠票数，因此不展示虚构排名。daily.dev 本轮自动抓取未解析出条目，科技与商业沿用已核验的公开文章。
