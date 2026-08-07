@@ -42,15 +42,18 @@ for (const required of [
   "https://brief.clairesparlor.com/2026/08/07/",
   "https://brief.clairesparlor.com/2026/08/07/og.png",
   "noindex,nofollow,noarchive",
-  "全部往期",
-  "今日延伸选题",
+  "2026.08.07",
+  "往期 ↗",
+  "今日思考",
 ]) {
   if (!html.includes(required)) {
     throw new Error(`Missing required production metadata: ${required}`);
   }
 }
-if (html.includes("玉婷")) {
-  throw new Error("Published issue contains reader-private wording");
+for (const forbidden of ["玉婷", "今日延伸选题", "source-strip", "Fri · 07 Aug 2026"]) {
+  if (html.includes(forbidden)) {
+    throw new Error(`Published issue contains forbidden wording or markup: ${forbidden}`);
+  }
 }
 
 const workerSource = await readFile(new URL("../src/index.js", import.meta.url), "utf8");

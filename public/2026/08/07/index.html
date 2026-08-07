@@ -99,7 +99,11 @@
         box-shadow: 0 0 0 7px rgba(255, 87, 51, 0.1);
       }
 
-      .timestamp { color: var(--ink-3); }
+      .timestamp {
+        color: var(--ink-3);
+        text-align: right;
+        white-space: nowrap;
+      }
       .timestamp a {
         margin-left: 16px;
         color: var(--accent);
@@ -158,31 +162,13 @@
         line-height: 1.65;
       }
 
-      .source-strip {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-bottom: 58px;
-      }
-
-      .source-strip span {
-        padding: 8px 13px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.7);
-        color: var(--ink-2);
-        font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-        font-size: 11px;
-        font-weight: 700;
-      }
-
       .section { margin-top: 56px; }
 
       .section-head {
         display: grid;
         grid-template-columns: 70px 1fr auto;
         gap: 18px;
-        align-items: baseline;
+        align-items: start;
         margin-bottom: 20px;
       }
 
@@ -192,6 +178,8 @@
         font-size: 13px;
         font-weight: 800;
         letter-spacing: 0.14em;
+        line-height: 1.2;
+        white-space: nowrap;
       }
 
       h2 {
@@ -199,6 +187,7 @@
         font-size: 27px;
         font-weight: 830;
         letter-spacing: -0.025em;
+        line-height: 1.2;
       }
 
       .section-note {
@@ -420,6 +409,9 @@
       @media (max-width: 800px) {
         body { width: 100%; }
         .page { padding: 32px 22px; }
+        .topline { gap: 14px; align-items: flex-start; }
+        .brand { max-width: 170px; line-height: 1.45; }
+        .timestamp { font-size: 11px; letter-spacing: 0.1em; }
         .hero { grid-template-columns: 1fr; }
         h1 { font-size: 44px; }
         .section-head {
@@ -429,11 +421,10 @@
             ". note";
           column-gap: 16px;
           row-gap: 6px;
-          align-items: baseline;
+          align-items: start;
         }
         .section-no {
           grid-area: number;
-          white-space: nowrap;
         }
         .section-head h2 {
           grid-area: title;
@@ -457,7 +448,7 @@
       <header>
         <div class="topline">
           <div class="brand"><i class="brand-dot"></i>Claire's Morning Signals</div>
-          <div class="timestamp">Fri · 07 Aug 2026 · 09:57 CST <a href="/">全部往期 ↗</a></div>
+          <div class="timestamp">2026.08.07 <a href="/">往期 ↗</a></div>
         </div>
 
         <div class="hero">
@@ -471,10 +462,6 @@
           </div>
         </div>
 
-        <div class="source-strip" aria-label="Sources">
-          <span>TECHMEME</span><span>DAILY.DEV</span><span>GITHUB TRENDING</span>
-          <span>HELLOGITHUB</span><span>PRODUCT HUNT</span>
-        </div>
       </header>
 
       <main>
@@ -584,7 +571,7 @@
         </section>
 
         <aside class="action-box">
-          <div class="action-label">今日延伸选题</div>
+          <div class="action-label">今日思考</div>
           <p>《当 AI 不再给网站带来点击，个人品牌要怎么进入模型的答案？》</p>
         </aside>
       </main>

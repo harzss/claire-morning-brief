@@ -50,7 +50,7 @@ daily.dev 的搜索流量 90 天增至约 7,000 次点击/日；但其 Google �
 - [Aveiro](https://www.producthunt.com/products/aveiro) — 用 AI Agent 发布网站、Newsletter 和社交内容，适合作为晨报→选题→发布链路的竞品样本。
 - [Cloudflare OS](https://www.producthunt.com/products/cloudflare) — “为公司构建 AI 操作系统”，体现 Agent 平台从单点工具向组织级运行层升级。
 
-## 今日延伸选题
+## 今日思考
 
 《当 AI 不再给网站带来点击，个人品牌要怎么进入模型的答案？》
 
