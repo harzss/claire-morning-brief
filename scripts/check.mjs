@@ -45,6 +45,7 @@ for (const required of [
   "2026.08.07",
   "往期 ↗",
   "今日思考",
+  "transform: translateY(-1px)",
   "更新于 2026.08.07 · 榜单数据以发布时为准",
 ]) {
   if (!html.includes(required)) {
