@@ -41,7 +41,7 @@
       html { background: #e9e7e3; }
 
       body {
-        width: 1080px;
+        width: min(1080px, 100%);
         margin: 0 auto;
         color: var(--ink);
         background:
@@ -112,10 +112,6 @@
       .timestamp a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
       .hero {
-        display: grid;
-        grid-template-columns: 1fr 280px;
-        gap: 50px;
-        align-items: end;
         padding: 68px 0 62px;
       }
 
@@ -130,7 +126,7 @@
       }
 
       h1 {
-        max-width: 650px;
+        max-width: 760px;
         margin: 0;
         font-size: 62px;
         font-weight: 860;
@@ -144,7 +140,9 @@
       }
 
       .hero-side {
-        padding: 21px 0 2px 25px;
+        max-width: 650px;
+        margin-top: 34px;
+        padding: 5px 0 5px 25px;
         border-left: 3px solid var(--accent-hot);
       }
 
@@ -166,8 +164,12 @@
 
       .section-head {
         display: grid;
-        grid-template-columns: 70px 1fr auto;
-        gap: 18px;
+        grid-template-columns: max-content minmax(0, 1fr);
+        grid-template-areas:
+          "number title"
+          ". note";
+        column-gap: 18px;
+        row-gap: 6px;
         align-items: start;
         margin-bottom: 20px;
       }
@@ -180,6 +182,7 @@
         letter-spacing: 0.14em;
         line-height: 1.2;
         white-space: nowrap;
+        grid-area: number;
       }
 
       h2 {
@@ -188,11 +191,14 @@
         font-weight: 830;
         letter-spacing: -0.025em;
         line-height: 1.2;
+        grid-area: title;
       }
 
       .section-note {
         color: var(--ink-3);
         font-size: 12px;
+        line-height: 1.45;
+        grid-area: note;
       }
 
       .news-grid {
@@ -365,9 +371,6 @@
       }
 
       .action-box {
-        display: grid;
-        grid-template-columns: 225px 1fr;
-        gap: 34px;
         margin-top: 58px;
         padding: 32px 34px;
         border-radius: 24px;
@@ -384,7 +387,7 @@
       }
 
       .action-box p {
-        margin: 0;
+        margin: 14px 0 0;
         font-size: 23px;
         font-weight: 790;
         letter-spacing: -0.025em;
@@ -407,39 +410,17 @@
       footer .right { max-width: 530px; text-align: right; }
 
       @media (max-width: 800px) {
-        body { width: 100%; }
         .page { padding: 32px 22px; }
         .topline { gap: 14px; align-items: flex-start; }
         .brand { max-width: 170px; line-height: 1.45; }
         .timestamp { font-size: 11px; letter-spacing: 0.1em; }
-        .hero { grid-template-columns: 1fr; }
+        .hero { padding: 54px 0 44px; }
+        .hero-side { margin-top: 30px; }
         h1 { font-size: 44px; }
-        .section-head {
-          grid-template-columns: max-content minmax(0, 1fr);
-          grid-template-areas:
-            "number title"
-            ". note";
-          column-gap: 16px;
-          row-gap: 6px;
-          align-items: start;
-        }
-        .section-no {
-          grid-area: number;
-        }
-        .section-head h2 {
-          grid-area: title;
-          line-height: 1.18;
-        }
-        .section-note {
-          grid-area: note;
-          max-width: 100%;
-          line-height: 1.45;
-          text-align: left;
-        }
+        .section-head { column-gap: 16px; }
         .news-grid, .product-grid { grid-template-columns: 1fr; }
         .repo { grid-template-columns: 38px 1fr; }
         .repo-stat { grid-column: 2; justify-self: start; text-align: left; }
-        .action-box { grid-template-columns: 1fr; }
       }
     </style>
   </head>
@@ -578,7 +559,7 @@
 
       <footer>
         <div>CLAIRE'S PARLOR · MORNING SIGNALS · SAMPLE 01</div>
-        <div class="right">数据截取：2026-08-07 09:57 CST。GitHub 为 daily trending 实时值；Product Hunt 使用官方 Atom Feed，未获得可靠票数，因此不展示虚构排名。</div>
+        <div class="right">更新于 2026.08.07 · 榜单数据以发布时为准</div>
       </footer>
     </div>
   </body>

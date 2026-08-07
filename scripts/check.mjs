@@ -45,12 +45,13 @@ for (const required of [
   "2026.08.07",
   "往期 ↗",
   "今日思考",
+  "更新于 2026.08.07 · 榜单数据以发布时为准",
 ]) {
   if (!html.includes(required)) {
     throw new Error(`Missing required production metadata: ${required}`);
   }
 }
-for (const forbidden of ["玉婷", "今日延伸选题", "source-strip", "Fri · 07 Aug 2026"]) {
+for (const forbidden of ["玉婷", "今日延伸选题", "source-strip", "Fri · 07 Aug 2026", "数据截取：2026-08-07 09:57 CST"]) {
   if (html.includes(forbidden)) {
     throw new Error(`Published issue contains forbidden wording or markup: ${forbidden}`);
   }
