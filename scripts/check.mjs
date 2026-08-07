@@ -94,6 +94,13 @@ const structuredIssue = JSON.parse(await readFile(new URL("../data/issues/2026/0
 if (structuredIssue.signals.length !== 4 || structuredIssue.repositories.length !== 4 || structuredIssue.products.length !== 2) {
   throw new Error("Structured issue history must preserve the 4/4/2 ten-item composition");
 }
+
+if (!/<section class="section thought-section">[\s\S]*?<div class="section-head">[\s\S]*?04 \/ THINK[\s\S]*?<h2>今日思考<\/h2>[\s\S]*?<aside class="action-box">\s*<p>/u.test(html)) {
+  throw new Error("04 / THINK heading must sit outside the thought content card");
+}
+if (/<aside class="action-box">[\s\S]*?(?:04 \/ THINK|<h2>今日思考<\/h2>)/u.test(html)) {
+  throw new Error("Thought card must contain only the topic content");
+}
 const dedupeKeys = [...structuredIssue.signals, ...structuredIssue.repositories, ...structuredIssue.products].map((item) => item.dedupe_key);
 if (dedupeKeys.some((key) => !key) || new Set(dedupeKeys).size !== 10) {
   throw new Error("Structured issue history requires ten unique dedupe keys");
