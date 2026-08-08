@@ -1,0 +1,107 @@
+{
+  "date": "2026-08-08",
+  "timezone": "Asia/Shanghai",
+  "generated_at": "2026-08-08T09:56:53+08:00",
+  "canonical_url": "https://brief.clairesparlor.com/2026/08/08/",
+  "brand": "CLAIRE'S MORNING SIGNALS",
+  "headline": "AI 正把竞争从会不会生成，推向谁能组织协作、守住入口并兑现商业价值。",
+  "dek": "10 分钟读完 · 10 条精选",
+  "signals": [
+    {
+      "title": "Claude Code 的不同会话开始互相通气",
+      "dedupe_key": "anthropic-claude-code-session-messaging-2026-08",
+      "source": "Techmeme · 9to5Mac",
+      "source_url": "https://9to5mac.com/2026/08/07/claude-code-now-lets-sessions-talk-to-each-other-on-macos/",
+      "summary": "Anthropic 为 Claude Code 加入会话间消息能力，不同任务可以共享发现、提问并同步进度，目前支持 macOS 和 Linux。",
+      "why": "一个人的 AI 工作台开始从“多开窗口”走向真正的协作系统。",
+      "published_at": "2026-08-07T22:29:59Z"
+    },
+    {
+      "title": "月之暗面迈出赴港上市的第一步",
+      "dedupe_key": "moonshot-joint-stock-hk-ipo-step-2026-08",
+      "source": "Techmeme · Financial Times",
+      "source_url": "https://www.ft.com/content/9c0d4f0d-d2c6-4189-b4bb-200d17a4720f",
+      "summary": "文件显示，月之暗面已把境内主体从有限责任公司改制为股份有限公司，被视为筹备香港 IPO 的首个公开动作。",
+      "why": "中国大模型公司的竞争开始接受资本市场对收入、成本与治理的公开检验。",
+      "published_at": "2026-08-07T19:40:01-04:00"
+    },
+    {
+      "title": "Harvey 的估值继续跑在垂直 AI 前面",
+      "dedupe_key": "harvey-funding-15-5b-valuation-2026-08",
+      "source": "Techmeme · The Information",
+      "source_url": "https://www.theinformation.com/articles/harvey-talks-raise-funding-15-5-billion-valuation",
+      "summary": "消息称法律 AI 公司 Harvey 正洽谈融资 5 亿美元以上，估值约 155 亿美元；其年化收入据称已超过 3.5 亿美元。",
+      "why": "垂直 Agent 能否形成高收入与高估值，正在成为 AI 商业化最清晰的样本之一。",
+      "published_at": "2026-08-07T13:25:01-04:00"
+    },
+    {
+      "title": "零售商既要进入 AI 答案，也要守住客户数据",
+      "dedupe_key": "retailers-ai-shopping-first-party-data-2026-08",
+      "source": "Techmeme · Reuters",
+      "source_url": "https://www.reuters.com/business/retail-consumer/retailers-tap-ai-shopping-traffic-fight-keep-customer-data-2026-08-07/",
+      "summary": "零售商正在调整网站以提高在聊天机器人结果中的曝光，同时尽量把成交留在自有网站，避免失去一方客户数据。",
+      "why": "AI 分发不是简单替代搜索，而是在重写品牌曝光、交易入口与用户资产的边界。",
+      "published_at": "2026-08-07T17:35:02-04:00"
+    }
+  ],
+  "repositories": [
+    {
+      "name": "bradautomates/claude-video",
+      "dedupe_key": "github:bradautomates/claude-video",
+      "url": "https://github.com/bradautomates/claude-video",
+      "summary": "让 Claude 下载视频、抽帧并转录后理解内容，最适合测试“播客素材自动拆解成选题与短内容”的工作流。",
+      "stars_total": "14,446",
+      "source": "HelloGitHub"
+    },
+    {
+      "name": "addyosmani/agent-skills",
+      "dedupe_key": "github:addyosmani/agent-skills",
+      "url": "https://github.com/addyosmani/agent-skills",
+      "summary": "一组面向 Codex、Claude Code 与 Cursor 的生产级工程 Skills，可直接参考怎样把个人经验沉淀成可重复执行的模块。",
+      "stars_total": "83,923",
+      "source": "GitHub Trending"
+    },
+    {
+      "name": "PrimeIntellect-ai/prime-agent",
+      "dedupe_key": "github:primeintellect-ai/prime-agent",
+      "url": "https://github.com/PrimeIntellect-ai/prime-agent",
+      "summary": "面向长时间自治任务的自改进 Agent，值得关注它如何保存经验、评估结果并在下一轮任务里迭代策略。",
+      "stars_total": "6,610",
+      "source": "GitHub Trending"
+    },
+    {
+      "name": "bojieli/ai-agent-book",
+      "dedupe_key": "github:bojieli/ai-agent-book",
+      "url": "https://github.com/bojieli/ai-agent-book",
+      "summary": "从上下文、工具、记忆到多 Agent 的中文开源书，适合把零散的 Agent 概念补成一套可落地的系统框架。",
+      "stars_total": "34,336",
+      "source": "HelloGitHub"
+    }
+  ],
+  "products": [
+    {
+      "name": "Rescript for Desktop",
+      "dedupe_key": "producthunt:rescript-edit-videos-like-you-edit-text",
+      "url": "https://www.producthunt.com/products/rescript-edit-videos-like-you-edit-text",
+      "icon": "./rescript.png",
+      "icon_source_url": "https://raw.githubusercontent.com/wassgha/rescript/main/screenshots/logo.png",
+      "summary": "一款开源、离线运行的文字式音视频编辑器，可按转录文本直接剪掉对应片段；很适合降低播客粗剪与口头语清理成本。",
+      "source": "Product Hunt official feed"
+    },
+    {
+      "name": "Brandfetch MCP",
+      "dedupe_key": "producthunt:brandfetch",
+      "url": "https://www.producthunt.com/products/brandfetch",
+      "icon": "./brandfetch.png",
+      "icon_source_url": "https://brandfetch.com/favicon.ico",
+      "summary": "让 AI Agent 获取经过核验的品牌 Logo 与视觉资产，减少自动生成海报、网页和社交内容时猜错品牌元素。",
+      "source": "Product Hunt official feed"
+    }
+  ],
+  "topic": "《当不同 AI Agent 可以互相同步进度，一个人的内容公司还需要怎样的“组织架构”？》",
+  "warnings": [
+    "daily.dev 本轮采集成功，但近期公开条目均已发布或相关性不足，因此未入选。",
+    "Product Hunt 官方 Feed 不提供可靠榜单票数，因此不展示排名。",
+    "Product Hunt 产品页触发公开验证页，图标改用项目官方仓库与官方网站的真实品牌资产。"
+  ]
+}

@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CLAIRE&#39;S MORNING SIGNALS · 2026-08-08</title>
+    <meta name="description" content="10 分钟读完 · 10 条精选：科技商业、GitHub 热门项目与 Product Hunt 精选。">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <link rel="canonical" href="https://brief.clairesparlor.com/2026/08/08/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="CLAIRE&#39;S MORNING SIGNALS">
+    <meta property="og:title" content="AI 正把竞争从会不会生成，推向谁能组织协作、守住入口并兑现商业价值。">
+    <meta property="og:description" content="10 分钟读完 · 10 条精选：科技商业、GitHub 热门项目与 Product Hunt 精选。">
+    <meta property="og:url" content="https://brief.clairesparlor.com/2026/08/08/">
+    <meta property="og:image" content="https://brief.clairesparlor.com/2026/08/08/og.png">
+    <meta property="og:image:secure_url" content="https://brief.clairesparlor.com/2026/08/08/og.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1731">
+    <meta property="og:image:height" content="909">
+    <meta property="og:image:alt" content="AI 正把竞争从会不会生成，推向谁能组织协作、守住入口并兑现商业价值。">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CLAIRE&#39;S MORNING SIGNALS · 2026.08.08">
+    <meta name="twitter:description" content="AI 正把竞争从会不会生成，推向谁能组织协作、守住入口并兑现商业价值。">
+    <meta name="twitter:image" content="https://brief.clairesparlor.com/2026/08/08/og.png">
+    <style>
+:root {
+  --paper: #fafafa;
+  --surface: #fff;
+  --ink: #0a0a0a;
+  --ink2: #3d3d3d;
+  --ink3: #737373;
+  --line: rgba(10, 10, 10, 0.09);
+  --accent: #c24a1e;
+  --hot: #ff5733;
+  --soft: #ffe0dc;
+  --cream: #fff4e8;
+}
+
+* { box-sizing: border-box; }
+html { background: #e9e7e3; }
+body {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  color: var(--ink);
+  background: radial-gradient(circle at 92% 7%, rgba(255, 87, 51, 0.15), transparent 18%), var(--paper);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+.page { position: relative; overflow: hidden; min-height: 100vh; padding: 58px; }
+.page::after {
+  content: attr(data-day);
+  position: absolute;
+  z-index: 0;
+  top: 5px;
+  right: 24px;
+  color: rgba(194, 74, 30, 0.045);
+  font-size: 270px;
+  font-weight: 900;
+  letter-spacing: -0.09em;
+  line-height: 1;
+  pointer-events: none;
+}
+
+header, main, footer { position: relative; z-index: 1; }
+.topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+  font: 700 12px ui-monospace, "SFMono-Regular", Menlo, monospace;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.brand { display: flex; flex: 0 0 auto; align-items: center; gap: 11px; white-space: nowrap; }
+.dot { flex: 0 0 11px; width: 11px; height: 11px; border-radius: 50%; background: var(--hot); box-shadow: 0 0 0 7px rgba(255, 87, 51, 0.1); }
+.time { color: var(--ink3); text-align: right; white-space: nowrap; }
+.hero { padding: 68px 0 62px; }
+.eyebrow, .section-no, .source {
+  color: var(--accent);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.eyebrow { margin-bottom: 22px; font-size: 13px; }
+h1 { max-width: 760px; margin: 0; font-size: 62px; font-weight: 860; letter-spacing: -0.055em; line-height: 1.06; }
+h1 em { color: var(--accent); font-style: normal; }
+.hero-side { max-width: 650px; margin-top: 34px; padding: 5px 0 5px 25px; border-left: 3px solid var(--hot); }
+.hero-side strong { display: block; margin-bottom: 9px; font-size: 17px; }
+.hero-side p { margin: 0; color: var(--ink3); font-size: 14px; line-height: 1.65; }
+
+.section { margin-top: 56px; }
+.section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "number" "title" "note";
+  row-gap: 8px;
+  align-items: start;
+  margin-bottom: 22px;
+}
+.section-no { grid-area: number; font-size: 13px; line-height: 1.2; white-space: nowrap; }
+.section h2 { grid-area: title; margin: 0; font-size: 27px; font-weight: 830; letter-spacing: -0.025em; line-height: 1.2; }
+.section-note { grid-area: note; color: var(--ink3); font-size: 12px; line-height: 1.45; }
+
+.signal-grid, .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.signal { min-height: 300px; padding: 30px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255, 255, 255, 0.92); }
+.signal:first-child { background: var(--ink); color: var(--paper); }
+.meta { display: flex; justify-content: space-between; margin-bottom: 27px; color: var(--ink3); font: 700 11px ui-monospace, monospace; letter-spacing: 0.08em; text-transform: uppercase; }
+.signal:first-child .meta { color: #aaa; }
+.source { font-size: 11px; }
+.signal:first-child .source { color: #ff896a; }
+.signal h3 { margin: 0 0 16px; font-size: 28px; font-weight: 820; letter-spacing: -0.035em; line-height: 1.18; }
+.signal p { margin: 0; color: var(--ink2); font-size: 15px; line-height: 1.68; }
+.signal:first-child p { color: #c8c8c8; }
+.signal .why { margin-top: 18px; color: var(--accent); font-size: 13px; font-weight: 720; }
+.signal:first-child .why { color: #ff896a; }
+
+.repo-list { overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: var(--surface); }
+.repo { display: grid; grid-template-columns: 54px 1fr 158px; gap: 22px; align-items: start; padding: 26px 28px; border-top: 1px solid var(--line); }
+.repo:first-child { border-top: 0; }
+.repo-index { padding-top: 4px; color: var(--accent); font: 800 14px/1.2 ui-monospace, monospace; }
+.repo h3 { margin: 0 0 7px; font: 800 18px/1.2 ui-monospace, monospace; letter-spacing: -0.02em; }
+.repo p { margin: 0; color: var(--ink3); font-size: 14px; line-height: 1.55; }
+.repo-stat { justify-self: end; text-align: right; font-family: ui-monospace, monospace; }
+.repo-stat strong { display: inline-flex; align-items: baseline; gap: 5px; color: var(--accent); font-size: 18px; white-space: nowrap; }
+.repo-star { font-family: Arial, sans-serif; font-size: 21px; line-height: 1; }
+
+.product { min-height: 235px; padding: 30px; border-radius: 22px; background: var(--cream); }
+.product:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.product-heading { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+.product-icon { flex: 0 0 52px; width: 52px; height: 52px; border: 1px solid var(--line); border-radius: 13px; background: #fff; object-fit: cover; }
+.product h3 { margin: 0; font-size: 26px; letter-spacing: -0.03em; line-height: 1.1; }
+.product p { margin: 0; color: var(--ink2); font-size: 14px; line-height: 1.62; }
+
+.action { margin-top: 58px; padding: 32px 34px; border-radius: 24px; background: var(--soft); }
+.action p { margin: 0; font-size: 23px; font-weight: 790; letter-spacing: -0.025em; line-height: 1.38; }
+footer { display: flex; justify-content: space-between; gap: 40px; margin-top: 46px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--ink3); font: 10px/1.7 ui-monospace, monospace; }
+footer .right { max-width: 530px; text-align: right; }
+
+@media (max-width: 800px) {
+  .page { padding: 32px 22px; }
+  .topline { gap: 14px; align-items: flex-start; }
+  .time { font-size: 11px; letter-spacing: 0.1em; }
+  .hero { padding: 54px 0 44px; }
+  .hero-side { margin-top: 30px; }
+  h1 { font-size: 44px; }
+  .signal-grid, .product-grid { grid-template-columns: 1fr; }
+  .product:last-child:nth-child(odd) { grid-column: auto; }
+  .repo { grid-template-columns: 38px 1fr; }
+  .repo-stat { grid-column: 2; justify-self: start; text-align: left; }
+  footer { flex-direction: column; }
+  footer .right { text-align: left; }
+}
+
+@media (max-width: 480px) {
+  .topline { gap: 10px; font-size: 10px; letter-spacing: 0.08em; }
+  .brand { gap: 8px; }
+  .dot { flex-basis: 9px; width: 9px; height: 9px; box-shadow: 0 0 0 5px rgba(255, 87, 51, 0.1); }
+  .time { font-size: 10px; letter-spacing: 0.04em; }
+  .time a { margin-left: 8px; }
+}
+
+.time a { margin-left: 16px; color: var(--accent); text-decoration: none; }
+.time a:hover { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 480px) { .time a { margin-left: 8px; } }
+    </style>
+  </head>
+  <body>
+    <div class="page" data-day="08">
+      <header>
+        <div class="topline">
+          <div class="brand"><i class="dot"></i>CLAIRE&#39;S MORNING SIGNALS</div>
+          <div class="time">2026.08.08 <a href="/">往期 ↗</a></div>
+        </div>
+        <div class="hero">
+          <div>
+            <div class="eyebrow">Today's signal · 今日信号</div>
+            <h1>AI 正把竞争从会不会生成，推向谁能组织协作、守住入口并兑现商业价值。</h1>
+          </div>
+          <div class="hero-side">
+            <strong>10 分钟读完 · 10 条精选</strong>
+            <p>不是榜单搬运。只保留与读者真正相关、可追溯的信号。</p>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="section">
+          <div class="section-head">
+            <div class="section-no">01 / SIGNAL</div>
+            <h2>科技与商业</h2>
+            <div class="section-note">过去 24 小时 + 一条近期深读</div>
+          </div>
+          <div class="signal-grid"><a class="signal" href="https://9to5mac.com/2026/08/07/claude-code-now-lets-sessions-talk-to-each-other-on-macos/"><div class="meta"><span class="source">Techmeme · 9to5Mac</span><span>01</span></div><h3>Claude Code 的不同会话开始互相通气</h3><p>Anthropic 为 Claude Code 加入会话间消息能力，不同任务可以共享发现、提问并同步进度，目前支持 macOS 和 Linux。</p><p class="why">值得看 → 一个人的 AI 工作台开始从“多开窗口”走向真正的协作系统。</p></a><a class="signal" href="https://www.ft.com/content/9c0d4f0d-d2c6-4189-b4bb-200d17a4720f"><div class="meta"><span class="source">Techmeme · Financial Times</span><span>02</span></div><h3>月之暗面迈出赴港上市的第一步</h3><p>文件显示，月之暗面已把境内主体从有限责任公司改制为股份有限公司，被视为筹备香港 IPO 的首个公开动作。</p><p class="why">值得看 → 中国大模型公司的竞争开始接受资本市场对收入、成本与治理的公开检验。</p></a><a class="signal" href="https://www.theinformation.com/articles/harvey-talks-raise-funding-15-5-billion-valuation"><div class="meta"><span class="source">Techmeme · The Information</span><span>03</span></div><h3>Harvey 的估值继续跑在垂直 AI 前面</h3><p>消息称法律 AI 公司 Harvey 正洽谈融资 5 亿美元以上，估值约 155 亿美元；其年化收入据称已超过 3.5 亿美元。</p><p class="why">值得看 → 垂直 Agent 能否形成高收入与高估值，正在成为 AI 商业化最清晰的样本之一。</p></a><a class="signal" href="https://www.reuters.com/business/retail-consumer/retailers-tap-ai-shopping-traffic-fight-keep-customer-data-2026-08-07/"><div class="meta"><span class="source">Techmeme · Reuters</span><span>04</span></div><h3>零售商既要进入 AI 答案，也要守住客户数据</h3><p>零售商正在调整网站以提高在聊天机器人结果中的曝光，同时尽量把成交留在自有网站，避免失去一方客户数据。</p><p class="why">值得看 → AI 分发不是简单替代搜索，而是在重写品牌曝光、交易入口与用户资产的边界。</p></a></div>
+        </section>
+        <section class="section">
+          <div class="section-head">
+            <div class="section-no">02 / BUILD</div>
+            <h2>开源项目精选</h2>
+            <div class="section-note">GitHub Trending + HelloGitHub · 按内容与工作流相关性排序</div>
+          </div>
+          <div class="repo-list"><a class="repo" href="https://github.com/bradautomates/claude-video"><div class="repo-index">01</div><div><h3>bradautomates/claude-video</h3><p>让 Claude 下载视频、抽帧并转录后理解内容，最适合测试“播客素材自动拆解成选题与短内容”的工作流。</p></div><div class="repo-stat"><strong>14,446 <span class="repo-star">★</span></strong></div></a><a class="repo" href="https://github.com/addyosmani/agent-skills"><div class="repo-index">02</div><div><h3>addyosmani/agent-skills</h3><p>一组面向 Codex、Claude Code 与 Cursor 的生产级工程 Skills，可直接参考怎样把个人经验沉淀成可重复执行的模块。</p></div><div class="repo-stat"><strong>83,923 <span class="repo-star">★</span></strong></div></a><a class="repo" href="https://github.com/PrimeIntellect-ai/prime-agent"><div class="repo-index">03</div><div><h3>PrimeIntellect-ai/prime-agent</h3><p>面向长时间自治任务的自改进 Agent，值得关注它如何保存经验、评估结果并在下一轮任务里迭代策略。</p></div><div class="repo-stat"><strong>6,610 <span class="repo-star">★</span></strong></div></a><a class="repo" href="https://github.com/bojieli/ai-agent-book"><div class="repo-index">04</div><div><h3>bojieli/ai-agent-book</h3><p>从上下文、工具、记忆到多 Agent 的中文开源书，适合把零散的 Agent 概念补成一套可落地的系统框架。</p></div><div class="repo-stat"><strong>34,336 <span class="repo-star">★</span></strong></div></a></div>
+        </section>
+        <section class="section">
+          <div class="section-head">
+            <div class="section-no">03 / SHIP</div>
+            <h2>Product Hunt 今日精选</h2>
+            <div class="section-note">从官方 Feed 候选中筛选 2 条；不按榜单照搬</div>
+          </div>
+          <div class="product-grid"><a class="product" href="https://www.producthunt.com/products/rescript-edit-videos-like-you-edit-text"><div class="product-heading"><img class="product-icon" src="./rescript.png" width="52" height="52" alt=""><h3>Rescript for Desktop</h3></div><p>一款开源、离线运行的文字式音视频编辑器，可按转录文本直接剪掉对应片段；很适合降低播客粗剪与口头语清理成本。</p></a><a class="product" href="https://www.producthunt.com/products/brandfetch"><div class="product-heading"><img class="product-icon" src="./brandfetch.png" width="52" height="52" alt=""><h3>Brandfetch MCP</h3></div><p>让 AI Agent 获取经过核验的品牌 Logo 与视觉资产，减少自动生成海报、网页和社交内容时猜错品牌元素。</p></a></div>
+        </section>
+        <section class="section thought-section">
+          <div class="section-head">
+            <div class="section-no">04 / THINK</div>
+            <h2>今日思考</h2>
+            <div class="section-note">把今天的信号变成一个值得继续追问的问题</div>
+          </div>
+          <aside class="action"><p>《当不同 AI Agent 可以互相同步进度，一个人的内容公司还需要怎样的“组织架构”？》</p></aside>
+        </section>
+      </main>
+      <footer>
+        <div>CLAIRE&#39;S MORNING SIGNALS</div>
+        <div class="right">更新于 2026.08.08 · 榜单数据以发布时为准</div>
+      </footer>
+    </div>
+  </body>
+</html>
