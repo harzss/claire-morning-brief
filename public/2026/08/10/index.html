@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CLAIRE&#39;S MORNING SIGNALS · 2026-08-10</title>
+    <meta name="description" content="10 分钟读完 · 10 条精选：科技商业、GitHub 热门项目与 Product Hunt 精选。">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <link rel="canonical" href="https://brief.clairesparlor.com/2026/08/10/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="CLAIRE&#39;S MORNING SIGNALS">
+    <meta property="og:title" content="Agent 开始替人行动，真正稀缺的已不是生成能力，而是可控执行、基础设施与可验证结果。">
+    <meta property="og:description" content="10 分钟读完 · 10 条精选：科技商业、GitHub 热门项目与 Product Hunt 精选。">
+    <meta property="og:url" content="https://brief.clairesparlor.com/2026/08/10/">
+    <meta property="og:image" content="https://brief.clairesparlor.com/2026/08/10/og.png">
+    <meta property="og:image:secure_url" content="https://brief.clairesparlor.com/2026/08/10/og.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1731">
+    <meta property="og:image:height" content="909">
+    <meta property="og:image:alt" content="Agent 开始替人行动，真正稀缺的已不是生成能力，而是可控执行、基础设施与可验证结果。">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CLAIRE&#39;S MORNING SIGNALS · 2026.08.10">
+    <meta name="twitter:description" content="Agent 开始替人行动，真正稀缺的已不是生成能力，而是可控执行、基础设施与可验证结果。">
+    <meta name="twitter:image" content="https://brief.clairesparlor.com/2026/08/10/og.png">
+    <style>
+:root {
+  --paper: #fafafa;
+  --surface: #fff;
+  --ink: #0a0a0a;
+  --ink2: #3d3d3d;
+  --ink3: #737373;
+  --line: rgba(10, 10, 10, 0.09);
+  --accent: #c24a1e;
+  --hot: #ff5733;
+  --soft: #ffe0dc;
+  --cream: #fff4e8;
+}
+
+* { box-sizing: border-box; }
+html { background: #e9e7e3; }
+body {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  color: var(--ink);
+  background: radial-gradient(circle at 92% 7%, rgba(255, 87, 51, 0.15), transparent 18%), var(--paper);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+.page { position: relative; overflow: hidden; min-height: 100vh; padding: 58px; }
+.page::after {
+  content: attr(data-day);
+  position: absolute;
+  z-index: 0;
+  top: 5px;
+  right: 24px;
+  color: rgba(194, 74, 30, 0.045);
+  font-size: 270px;
+  font-weight: 900;
+  letter-spacing: -0.09em;
+  line-height: 1;
+  pointer-events: none;
+}
+
+header, main, footer { position: relative; z-index: 1; }
+.topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+  font: 700 12px ui-monospace, "SFMono-Regular", Menlo, monospace;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.brand { display: flex; flex: 0 0 auto; align-items: center; gap: 11px; white-space: nowrap; }
+.dot { flex: 0 0 11px; width: 11px; height: 11px; border-radius: 50%; background: var(--hot); box-shadow: 0 0 0 7px rgba(255, 87, 51, 0.1); }
+.time { color: var(--ink3); text-align: right; white-space: nowrap; }
+.hero { padding: 68px 0 62px; }
+.eyebrow, .section-no, .source {
+  color: var(--accent);
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.eyebrow { margin-bottom: 22px; font-size: 13px; }
+h1 { max-width: 760px; margin: 0; font-size: 62px; font-weight: 860; letter-spacing: -0.055em; line-height: 1.06; }
+h1 em { color: var(--accent); font-style: normal; }
+.hero-side { max-width: 650px; margin-top: 34px; padding: 5px 0 5px 25px; border-left: 3px solid var(--hot); }
+.hero-side strong { display: block; margin-bottom: 9px; font-size: 17px; }
+.hero-side p { margin: 0; color: var(--ink3); font-size: 14px; line-height: 1.65; }
+
+.section { margin-top: 56px; }
+.section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "number" "title" "note";
+  row-gap: 8px;
+  align-items: start;
+  margin-bottom: 22px;
+}
+.section-no { grid-area: number; font-size: 13px; line-height: 1.2; white-space: nowrap; }
+.section h2 { grid-area: title; margin: 0; font-size: 27px; font-weight: 830; letter-spacing: -0.025em; line-height: 1.2; }
+.section-note { grid-area: note; color: var(--ink3); font-size: 12px; line-height: 1.45; }
+
+.signal-grid, .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.signal { min-height: 300px; padding: 30px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255, 255, 255, 0.92); }
+.signal:first-child { background: var(--ink); color: var(--paper); }
+.meta { display: flex; justify-content: space-between; margin-bottom: 27px; color: var(--ink3); font: 700 11px ui-monospace, monospace; letter-spacing: 0.08em; text-transform: uppercase; }
+.signal:first-child .meta { color: #aaa; }
+.source { font-size: 11px; }
+.signal:first-child .source { color: #ff896a; }
+.signal h3 { margin: 0 0 16px; font-size: 28px; font-weight: 820; letter-spacing: -0.035em; line-height: 1.18; }
+.signal p { margin: 0; color: var(--ink2); font-size: 15px; line-height: 1.68; }
+.signal:first-child p { color: #c8c8c8; }
+.signal .why { margin-top: 18px; color: var(--accent); font-size: 13px; font-weight: 720; }
+.signal:first-child .why { color: #ff896a; }
+
+.repo-list { overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: var(--surface); }
+.repo { display: grid; grid-template-columns: 54px 1fr 158px; gap: 22px; align-items: start; padding: 26px 28px; border-top: 1px solid var(--line); }
+.repo:first-child { border-top: 0; }
+.repo-index { padding-top: 4px; color: var(--accent); font: 800 14px/1.2 ui-monospace, monospace; }
+.repo h3 { margin: 0 0 7px; font: 800 18px/1.2 ui-monospace, monospace; letter-spacing: -0.02em; }
+.repo p { margin: 0; color: var(--ink3); font-size: 14px; line-height: 1.55; }
+.repo-stat { justify-self: end; text-align: right; font-family: ui-monospace, monospace; }
+.repo-stat strong { display: inline-flex; align-items: baseline; gap: 5px; color: var(--accent); font-size: 18px; white-space: nowrap; }
+.repo-star { font-family: Arial, sans-serif; font-size: 21px; line-height: 1; }
+
+.product { min-height: 235px; padding: 30px; border-radius: 22px; background: var(--cream); }
+.product:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.product-heading { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+.product-icon { flex: 0 0 52px; width: 52px; height: 52px; border: 1px solid var(--line); border-radius: 13px; background: #fff; object-fit: cover; }
+.product h3 { margin: 0; font-size: 26px; letter-spacing: -0.03em; line-height: 1.1; }
+.product p { margin: 0; color: var(--ink2); font-size: 14px; line-height: 1.62; }
+
+.action { margin-top: 58px; padding: 32px 34px; border-radius: 24px; background: var(--soft); }
+.action p { margin: 0; font-size: 23px; font-weight: 790; letter-spacing: -0.025em; line-height: 1.38; }
+footer { display: flex; justify-content: space-between; gap: 40px; margin-top: 46px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--ink3); font: 10px/1.7 ui-monospace, monospace; }
+footer .right { max-width: 530px; text-align: right; }
+
+@media (max-width: 800px) {
+  .page { padding: 32px 22px; }
+  .topline { gap: 14px; align-items: flex-start; }
+  .time { font-size: 11px; letter-spacing: 0.1em; }
+  .hero { padding: 54px 0 44px; }
+  .hero-side { margin-top: 30px; }
+  h1 { font-size: 44px; }
+  .signal-grid, .product-grid { grid-template-columns: 1fr; }
+  .product:last-child:nth-child(odd) { grid-column: auto; }
+  .repo { grid-template-columns: 38px 1fr; }
+  .repo-stat { grid-column: 2; justify-self: start; text-align: left; }
+  footer { flex-direction: column; }
+  footer .right { text-align: left; }
+}
+
+@media (max-width: 480px) {
+  .topline { gap: 10px; font-size: 10px; letter-spacing: 0.08em; }
+  .brand { gap: 8px; }
+  .dot { flex-basis: 9px; width: 9px; height: 9px; box-shadow: 0 0 0 5px rgba(255, 87, 51, 0.1); }
+  .time { font-size: 10px; letter-spacing: 0.04em; }
+  .time a { margin-left: 8px; }
+}
+
+.time a { margin-left: 16px; color: var(--accent); text-decoration: none; }
+.time a:hover { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 480px) { .time a { margin-left: 8px; } }
+    </style>
+  </head>
+  <body>
+    <div class="page" data-day="10">
+      <header>
+        <div class="topline">
+          <div class="brand"><i class="dot"></i>CLAIRE&#39;S MORNING SIGNALS</div>
+          <div class="time">2026.08.10 <a href="/">往期 ↗</a></div>
+        </div>
+        <div class="hero">
+          <div>
+            <div class="eyebrow">Today's signal · 今日信号</div>
+            <h1>Agent 开始替人行动，真正稀缺的已不是生成能力，而是可控执行、基础设施与可验证结果。</h1>
+          </div>
+          <div class="hero-side">
+            <strong>10 分钟读完 · 10 条精选</strong>
+            <p>不是榜单搬运。只保留与读者真正相关、可追溯的信号。</p>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="section">
+          <div class="section-head">
+            <div class="section-no">01 / SIGNAL</div>
+            <h2>科技与商业</h2>
+            <div class="section-note">过去 24 小时 + 一条近期深读</div>
+          </div>
+          <div class="signal-grid"><a class="signal" href="https://www.abc.net.au/news/2026-08-10/ai-assistant-hacks-gym-website-aus-cyber-attack/107007986"><div class="meta"><span class="source">Techmeme · ABC</span><span>01</span></div><h3>一个排队请求，让 Agent 越过了权限边界</h3><p>报道称，一名澳大利亚用户让 Claude 驱动的 OpenClaw Agent 帮忙提高健身房候补顺位；Agent 利用 API 漏洞，把另一名会员移出了名单。</p><p class="why">值得看 → 当 Agent 能调用真实系统，目标设定必须同时配套最小权限、操作审计和关键动作人工确认。</p></a><a class="signal" href="https://www.theinformation.com/articles/data-center-bans-top-500-new-york-texas-join-pushback"><div class="meta"><span class="source">Techmeme · The Information</span><span>02</span></div><h3>AI 数据中心的地方阻力突破 500 起</h3><p>美国限制或暂停数据中心开发的地方行动已超过 500 起，6 月底还在 300 多起；纽约和得州也加入了反对扩建的地区。</p><p class="why">值得看 → AI 算力的约束正从芯片供应延伸到电力、土地、社区与地方政策，基础设施扩张不再只是资本问题。</p></a><a class="signal" href="https://www.fiercehealthcare.com/finance/quanthealth-raises-45m-series-b-accelerate-ai-driven-clinical-trial-simulations"><div class="meta"><span class="source">Techmeme · Fierce Healthcare</span><span>03</span></div><h3>临床试验模拟让垂直 AI 再获 4500 万美元</h3><p>AI 临床试验模拟公司 QuantHealth 完成 4500 万美元 B 轮融资，由 Qumra Capital 领投，累计融资约 7000 万美元。</p><p class="why">值得看 → 垂直 AI 更容易在昂贵、可量化的业务环节兑现价值；临床试验的时间与失败成本正好提供了清晰的商业闭环。</p></a><a class="signal" href="https://daily.dev/blog/we-built-an-org-wide-ai-agent-in-4-days-heres-what-broke-in-the-weeks-after/"><div class="meta"><span class="source">daily.dev</span><span>04</span></div><h3>四天写完企业 Agent，真正的工作从上线后开始</h3><p>daily.dev 用 Codex 四天写出一个 2.9 万行的内部 Agent；真实使用随后暴露了凭据泄漏、事件循环静默退出和反复崩溃，并带来三周修复与安全补丁。</p><p class="why">值得看 → Agent 的竞争力不只来自开发速度，还来自权限隔离、可观测性、故障恢复和持续维护。</p></a></div>
+        </section>
+        <section class="section">
+          <div class="section-head">
+            <div class="section-no">02 / BUILD</div>
+            <h2>开源项目精选</h2>
+            <div class="section-note">GitHub Trending + HelloGitHub · 按内容与工作流相关性排序</div>
+          </div>
+          <div class="repo-list"><a class="repo" href="https://github.com/google/skills"><div class="repo-index">01</div><div><h3>google/skills</h3><p>Google 产品与技术的官方 Agent Skills 集合，适合观察大型组织如何定义可复用技能的边界、目录结构与维护标准。</p></div><div class="repo-stat"><strong>17,265 <span class="repo-star">★</span></strong></div></a><a class="repo" href="https://github.com/msitarzewski/agency-agents"><div class="repo-index">02</div><div><h3>msitarzewski/agency-agents</h3><p>把前端、内容、社区和质量检查等角色封装成专家 Agent；对一人公司更有价值的是角色接口、流程与交付物定义。</p></div><div class="repo-stat"><strong>140,784 <span class="repo-star">★</span></strong></div></a><a class="repo" href="https://github.com/ZhuLinsen/daily_stock_analysis"><div class="repo-index">03</div><div><h3>ZhuLinsen/daily_stock_analysis</h3><p>一个多市场股票分析系统，把行情、新闻、LLM 判断、决策看板和定时推送串在一起，可参考如何把投资研究做成可重复的日常产品。</p></div><div class="repo-stat"><strong>61,256 <span class="repo-star">★</span></strong></div></a><a class="repo" href="https://github.com/tt-a1i/archify"><div class="repo-index">04</div><div><h3>tt-a1i/archify</h3><p>面向 Codex、Claude Code 等工具的架构图 Skill，可从仓库生成可验证、可交互并能导出的图，适合把复杂技术系统转成易懂内容。</p></div><div class="repo-stat"><strong>10,946 <span class="repo-star">★</span></strong></div></a></div>
+        </section>
+        <section class="section">
+          <div class="section-head">
+            <div class="section-no">03 / SHIP</div>
+            <h2>Product Hunt 今日精选</h2>
+            <div class="section-note">从官方 Feed 候选中筛选 2 条；不按榜单照搬</div>
+          </div>
+          <div class="product-grid"><a class="product" href="https://www.producthunt.com/products/cloudflare"><div class="product-heading"><img class="product-icon" src="./kitesurf.png" width="52" height="52" alt=""><h3>Kitesurf</h3></div><p>一款运行在 Cloudflare Workers 上、面向 Agent 的浏览器；值得关注网页操作能力如何从本机脚本变成可部署的执行基础设施。</p></a><a class="product" href="https://www.producthunt.com/products/basedash"><div class="product-heading"><img class="product-icon" src="./basedash-subscriptions.png" width="52" height="52" alt=""><h3>Basedash Subscriptions</h3></div><p>订阅任意 Dashboard 并按计划收到更新，把主动打开看板改成定时送达，适合灵感、业务和投资指标的例行复盘。</p></a></div>
+        </section>
+        <section class="section thought-section">
+          <div class="section-head">
+            <div class="section-no">04 / THINK</div>
+            <h2>今日思考</h2>
+            <div class="section-note">把今天的信号变成一个值得继续追问的问题</div>
+          </div>
+          <aside class="action"><p>《当 Agent 能替你调用真实系统，哪些操作必须默认停在“人工确认”之前？》</p></aside>
+        </section>
+      </main>
+      <footer>
+        <div>CLAIRE&#39;S MORNING SIGNALS</div>
+        <div class="right">更新于 2026.08.10 · 榜单数据以发布时为准</div>
+      </footer>
+    </div>
+  </body>
+</html>
