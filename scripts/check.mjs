@@ -64,7 +64,7 @@ for (const issue of issues) {
   ]) {
     if (!html.includes(required)) throw new Error(`${issue.date} is missing: ${required}`);
   }
-  if (!/CLAIRE(?:'|&#39;)S MORNING SIGNALS/u.test(html)) {
+  if (!/FRONTIER WORLD/u.test(html)) {
     throw new Error(`${issue.date} is missing the canonical brand name`);
   }
 
@@ -86,7 +86,7 @@ for (const issue of issues) {
     if (html.includes(forbidden)) throw new Error(`${issue.date} contains forbidden wording or markup: ${forbidden}`);
   }
 
-  if (!markdown.includes(`# CLAIRE'S MORNING SIGNALS · ${displayDate}`) || !markdown.includes("## 04 / THINK · 今日思考")) {
+  if (!markdown.includes(`# FRONTIER WORLD · ${displayDate}`) || !markdown.includes("## 04 / THINK · 今日思考")) {
     throw new Error(`${issue.date} Markdown edition is incomplete`);
   }
   if (structuredIssue.signals.length !== 4 || structuredIssue.repositories.length !== 4 || structuredIssue.products.length !== 2) {

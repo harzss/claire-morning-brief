@@ -1,6 +1,6 @@
-# Claire's Morning Signals
+# Frontier World Technology Brief
 
-Private-by-link daily technology briefing published at [brief.clairesparlor.com](https://brief.clairesparlor.com).
+Public-facing daily technology briefing by Frontier World, currently published at [brief.clairesparlor.com](https://brief.clairesparlor.com).
 
 ## Structure
 
